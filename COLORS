@@ -1,0 +1,14 @@
+// number, twinkle color, background color, delay
+// twinkleRand(5,strip.Color(255,255,255),strip.Color(255, 0, 100),90);
+
+// twinkle random number of pixels
+void twinkleRand(int num,uint32_t c,uint32_t bg,int wait) {
+  // set background
+   stripSet(bg,0);
+   // for each num
+   for (int i=0; i<num; i++) {
+     strip.setPixelColor(random(strip.numPixels()),c);
+   }
+  strip.show();
+  delay(wait);
+}
